@@ -1,0 +1,50 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="LibraryApp.LoginWindow"
+    WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+    Title="Login" Height="500" Width="550">
+
+    <Window.Resources>
+        <Style x:Key="LoginButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <TextBlock Text="BEJELENTKEZÉS" HorizontalAlignment="Center" FontSize="24" Margin="0,109,0,0" Foreground="#FF2811AA" FontWeight="Bold" VerticalAlignment="Top"/>
+        <Border CornerRadius="10" Background="#FFFA4E4E" HorizontalAlignment="Center" Width="472" Height="160" VerticalAlignment="Top" Margin="0,175,0,0">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,10">
+                    <TextBlock Text="EMAIL:" VerticalAlignment="Center" Foreground="White" FontSize="24" FontWeight="Bold"/>
+                    <TextBox x:Name="EmailTextBox" Tag="Username" Margin="5" Width="355" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontSize="18"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,10">
+                    <TextBlock Text="JELSZÓ:" VerticalAlignment="Center" Foreground="White" FontSize="24" FontWeight="Bold"/>
+                    <PasswordBox x:Name="PasswordBox" Tag="Password" Margin="5" Width="355" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontSize="18"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Image HorizontalAlignment="Center" Height="85" Width="78" Margin="0,10,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.863,0.518" Source="C:\Users\user\Desktop\Programok\ProgI\LibraryApp\LibraryApp\images\logo2.png"/>
+        <Button x:Name="LoginButton" Content="BEJELENTKEZÉS" Style="{StaticResource LoginButton}" HorizontalAlignment="Center" Margin="0,310,0,0" Click="LoginButton_Click" Width="125" Height="35" Background="#FF2811AA" FontWeight="Bold" Foreground="White" FontFamily="Bahnschrift SemiBold" FontSize="14"/>
+        <Button x:Name="BackButton" Content="MÉGSE" Style="{StaticResource LoginButton}" HorizontalAlignment="Center" Margin="0,420,0,0" Width="126" Click="BackButton_Click" FontSize="14" Background="#FFFA4E4E" FontWeight="Bold" Foreground="White" FontFamily="Bahnschrift SemiBold" Height="35" VerticalAlignment="Top" />
+    </Grid>
+</Window>

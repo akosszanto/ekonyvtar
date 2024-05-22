@@ -1,0 +1,37 @@
+﻿<Window x:Class="LibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryApp"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style x:Key="MainButtons" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Button x:Name="LoginButton" Content="BEJELENTKEZÉS" Style="{StaticResource MainButtons}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="35" Click="LoginButton_Click" Margin="0,217,0,0" Background="#FF2811AA" FontWeight="Bold" Foreground="White" FontSize="14" FontFamily="Bahnschrift SemiBold" />
+        <Button x:Name="RegistrationButton" Content="REGISZTRÁCIÓ" Style="{StaticResource MainButtons}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="35" Margin="0,266,0,0" Click="RegistrationButton_Click" Background="#FF2811AA" FontWeight="Bold" Foreground="White" FontSize="14" FontFamily="Bahnschrift SemiBold" />
+        <Button x:Name="ExitButton" Content="KILÉPÉS" Style="{StaticResource MainButtons}" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Width="120" Height="35" Background="#FA4E4E" FontWeight="Bold" Foreground="White" FontSize="14" FontFamily="Bahnschrift SemiBold" Click="ExitButton_Click" />
+        <Image HorizontalAlignment="Center" Height="228" Margin="0,-11,0,0" VerticalAlignment="Top" Width="288" RenderTransformOrigin="0.531,0.758" Source="C:\Users\user\Desktop\Programok\ProgI\LibraryApp\LibraryApp\images\logo.png"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="0" Margin="-149,452,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+    
+</Window>
